@@ -1,0 +1,100 @@
+.members-page .table-card {
+    animation: fadeInUp 0.4s ease;
+}
+
+.members-page .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.members-page .kpi-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.members-page .kpi-card::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    opacity: 0.08;
+    background: currentColor;
+}
+
+.members-page .kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.members-page .kpi-card.info {
+    border-left-color: var(--info);
+    color: var(--info);
+}
+
+.members-page .kpi-card.success {
+    border-left-color: var(--success);
+    color: var(--success);
+}
+
+.members-page .kpi-card.danger {
+    border-left-color: var(--danger);
+    color: var(--danger);
+}
+
+.members-page .kpi-card .kpi-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.members-page .kpi-card .kpi-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.members-page .kpi-card .kpi-label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.member-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#memberModal .form-group select {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .members-page .kpi-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+}

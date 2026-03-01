@@ -1,0 +1,62 @@
+.books-page .table-card {
+    animation: fadeInUp 0.4s ease;
+}
+
+.isbn-cell {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.3px;
+}
+
+.genre-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    background: var(--info-bg);
+    color: var(--info);
+}
+
+.stock-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stock-indicator .stock-bar {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border);
+    overflow: hidden;
+}
+
+.stock-indicator .stock-bar .stock-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.stock-fill.high {
+    background: var(--success);
+}
+
+.stock-fill.medium {
+    background: var(--warning);
+}
+
+.stock-fill.low {
+    background: var(--danger);
+}
+
+#bookModal .form-group select {
+    cursor: pointer;
+}
+
+#bookModal .form-group input[type="number"] {
+    width: 100%;
+}

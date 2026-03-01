@@ -1,0 +1,125 @@
+.issues-page .table-card {
+    animation: fadeInUp 0.4s ease;
+}
+
+.issues-page .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.issues-page .kpi-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.issues-page .kpi-card::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    opacity: 0.08;
+    background: currentColor;
+}
+
+.issues-page .kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.issues-page .kpi-card.info {
+    border-left-color: var(--info);
+    color: var(--info);
+}
+
+.issues-page .kpi-card.success {
+    border-left-color: var(--success);
+    color: var(--success);
+}
+
+.issues-page .kpi-card.danger {
+    border-left-color: var(--danger);
+    color: var(--danger);
+}
+
+.issues-page .kpi-card.warning {
+    border-left-color: var(--warning);
+    color: var(--warning);
+}
+
+.issues-page .kpi-card .kpi-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.issues-page .kpi-card .kpi-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.issues-page .kpi-card .kpi-label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.filter-tabs .btn.active {
+    background: var(--primary);
+    color: var(--text-white);
+    border-color: var(--primary);
+}
+
+.issues-page tr.overdue-row {
+    background: rgba(239, 68, 68, 0.03);
+}
+
+.return-btn {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+}
+
+#issueModal select {
+    cursor: pointer;
+}
+
+#issueModal input[type="date"] {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .issues-page .kpi-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .filter-tabs {
+        gap: 6px;
+    }
+
+    .filter-tabs .btn {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+}
