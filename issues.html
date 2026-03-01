@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issues — LibraryHub</title>
+    <meta name="description" content="Issue and return books — track all borrowing activity">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/issues.css">
+</head>
+
+<body>
+    <div class="app-layout">
+=        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">📚</div>
+                <div>
+                    <h2>LibraryHub</h2>
+                    <span>Management System</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Main Menu</div>
+                <a href="dashboard.html" class="nav-item" data-page="dashboard.html">
+                    <span class="nav-icon">📊</span> Dashboard
+                </a>
+                <a href="books.html" class="nav-item" data-page="books.html">
+                    <span class="nav-icon">📖</span> Books
+                </a>
+                <a href="members.html" class="nav-item" data-page="members.html">
+                    <span class="nav-icon">👥</span> Members
+                </a>
+                <a href="issues.html" class="nav-item active" data-page="issues.html">
+                    <span class="nav-icon">🔄</span> Issue / Return
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon">🚪</span> Logout
+                </a>
+            </div>
+        </aside>
+        <div class="sidebar-overlay"></div>
+
+=        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <h1>Issue / Return</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="user-avatar">A</div>
+                        <div class="user-info">
+                            <div class="user-name">Admin</div>
+                            <div class="user-role">Librarian</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content issues-page">
+=                <div class="kpi-grid">
+                    <div class="kpi-card info">
+                        <div class="kpi-icon">📋</div>
+                        <div class="kpi-value">12</div>
+                        <div class="kpi-label">Total Issues</div>
+                    </div>
+                    <div class="kpi-card warning">
+                        <div class="kpi-icon">📤</div>
+                        <div class="kpi-value">5</div>
+                        <div class="kpi-label">Currently Active</div>
+                    </div>
+                    <div class="kpi-card danger">
+                        <div class="kpi-icon">⚠️</div>
+                        <div class="kpi-value">3</div>
+                        <div class="kpi-label">Overdue</div>
+                    </div>
+                    <div class="kpi-card success">
+                        <div class="kpi-icon">✅</div>
+                        <div class="kpi-value">4</div>
+                        <div class="kpi-label">Returned</div>
+                    </div>
+                </div>
+
+=                <div class="table-card">
+                    <div class="table-header">
+                        <div>
+                            <h3>🔄 All Issue Records</h3>
+                        </div>
+                        <div class="table-actions">
+                            <div class="table-search">
+                                <span class="search-icon">🔍</span>
+                                <input type="text" id="issueSearch" placeholder="Search issues...">
+                            </div>
+                            <button class="btn btn-primary btn-sm">+ Issue Book</button>
+                        </div>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Issue ID</th>
+                                    <th>Book Title</th>
+                                    <th>Member</th>
+                                    <th>Issue Date</th>
+                                    <th>Due Date</th>
+                                    <th>Return Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>#ISS-001</strong></td>
+                                    <td>1984</td>
+                                    <td>Karthik Nair</td>
+                                    <td>2026-02-20</td>
+                                    <td>2026-03-06</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-info">Active</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm return-btn">Return</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ISS-002</strong></td>
+                                    <td>To Kill a Mockingbird</td>
+                                    <td>Ananya Iyer</td>
+                                    <td>2026-02-19</td>
+                                    <td>2026-03-05</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-info">Active</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm return-btn">Return</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ISS-003</strong></td>
+                                    <td>Atomic Habits</td>
+                                    <td>Sneha Reddy</td>
+                                    <td>2026-01-25</td>
+                                    <td>2026-02-08</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-danger">Overdue</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm return-btn">Return</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ISS-004</strong></td>
+                                    <td>Clean Code</td>
+                                    <td>Priya Kumar</td>
+                                    <td>2026-01-28</td>
+                                    <td>2026-02-11</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-danger">Overdue</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm return-btn">Return</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ISS-005</strong></td>
+                                    <td>The Catcher in the Rye</td>
+                                    <td>Rahul Gupta</td>
+                                    <td>2026-02-15</td>
+                                    <td>2026-03-01</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-warning">Due Soon</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm return-btn">Return</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ISS-006</strong></td>
+                                    <td>Sapiens</td>
+                                    <td>Rahul Gupta</td>
+                                    <td>2026-01-30</td>
+                                    <td>2026-02-13</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-danger">Overdue</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm return-btn">Return</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ISS-007</strong></td>
+                                    <td>The Great Gatsby</td>
+                                    <td>Priya Kumar</td>
+                                    <td>2026-02-10</td>
+                                    <td>2026-02-24</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-warning">Due Soon</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm return-btn">Return</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ISS-008</strong></td>
+                                    <td>The Art of War</td>
+                                    <td>Meera Joshi</td>
+                                    <td>2026-02-18</td>
+                                    <td>2026-03-04</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-info">Active</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm return-btn">Return</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ISS-009</strong></td>
+                                    <td>The Hobbit</td>
+                                    <td>Rahul Gupta</td>
+                                    <td>2026-01-20</td>
+                                    <td>2026-02-03</td>
+                                    <td>2026-02-01</td>
+                                    <td><span class="badge badge-success">Returned</span></td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ISS-010</strong></td>
+                                    <td>Brave New World</td>
+                                    <td>Ananya Iyer</td>
+                                    <td>2026-01-15</td>
+                                    <td>2026-01-29</td>
+                                    <td>2026-01-28</td>
+                                    <td><span class="badge badge-success">Returned</span></td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ISS-011</strong></td>
+                                    <td>Intro to Algorithms</td>
+                                    <td>Karthik Nair</td>
+                                    <td>2026-01-10</td>
+                                    <td>2026-01-24</td>
+                                    <td>2026-01-22</td>
+                                    <td><span class="badge badge-success">Returned</span></td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ISS-012</strong></td>
+                                    <td>The Alchemist</td>
+                                    <td>Sneha Reddy</td>
+                                    <td>2026-01-05</td>
+                                    <td>2026-01-19</td>
+                                    <td>2026-01-18</td>
+                                    <td><span class="badge badge-success">Returned</span></td>
+                                    <td>—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer">
+                        <span>Showing 12 of 12 issue records</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+=    <div class="modal-overlay" id="issueModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Issue a Book</h3>
+                <button class="modal-close">✕</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="issueBook">Select Book</label>
+                        <select id="issueBook">
+                            <option value="">— Choose a book —</option>
+                            <option>The Great Gatsby</option>
+                            <option>To Kill a Mockingbird</option>
+                            <option>1984</option>
+                            <option>Pride and Prejudice</option>
+                            <option>The Hobbit</option>
+                            <option>Brave New World</option>
+                            <option>The Alchemist</option>
+                            <option>Sapiens</option>
+                            <option>Introduction to Algorithms</option>
+                            <option>Atomic Habits</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="issueMember">Select Member</label>
+                        <select id="issueMember">
+                            <option value="">— Choose a member —</option>
+                            <option>Rahul Gupta</option>
+                            <option>Ananya Iyer</option>
+                            <option>Sneha Reddy</option>
+                            <option>Priya Kumar</option>
+                            <option>Karthik Nair</option>
+                            <option>Meera Joshi</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="issueDate">Issue Date</label>
+                            <input type="date" id="issueDate" value="2026-02-23">
+                        </div>
+                        <div class="form-group">
+                            <label for="dueDate">Due Date</label>
+                            <input type="date" id="dueDate" value="2026-03-09">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline">Cancel</button>
+                <button class="btn btn-primary">Issue Book</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

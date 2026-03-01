@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — LibraryHub</title>
+  <meta name="description" content="Sign in to the LibraryHub Management Dashboard">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+  <div class="login-page">
+    <div class="login-card">
+      <div class="logo">
+        <div class="logo-icon">📚</div>
+        <h1>LibraryHub</h1>
+        <p>Library Management Dashboard</p>
+      </div>
+
+      <form action="dashboard.html" method="get">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your username" value="admin" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" value="admin123" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Sign In →
+        </button>
+      </form>
+
+      <p style="text-align:center; margin-top:20px; font-size:0.8125rem; color:var(--text-muted);">
+        Demo: <strong>admin</strong> / <strong>admin123</strong>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

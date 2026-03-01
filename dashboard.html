@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — LibraryHub</title>
+    <meta name="description" content="LibraryHub Dashboard — Overview of library statistics and activity">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">📚</div>
+                <div>
+                    <h2>LibraryHub</h2>
+                    <span>Management System</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Main Menu</div>
+                <a href="dashboard.html" class="nav-item active" data-page="dashboard.html">
+                    <span class="nav-icon">📊</span> Dashboard
+                </a>
+                <a href="books.html" class="nav-item" data-page="books.html">
+                    <span class="nav-icon">📖</span> Books
+                </a>
+                <a href="members.html" class="nav-item" data-page="members.html">
+                    <span class="nav-icon">👥</span> Members
+                </a>
+                <a href="issues.html" class="nav-item" data-page="issues.html">
+                    <span class="nav-icon">🔄</span> Issue / Return
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon">🚪</span> Logout
+                </a>
+            </div>
+        </aside>
+        <div class="sidebar-overlay"></div>
+
+       <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="user-avatar">A</div>
+                        <div class="user-info">
+                            <div class="user-name">Admin</div>
+                            <div class="user-role">Librarian</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="kpi-grid">
+                    <div class="kpi-card info">
+                        <div class="kpi-icon">📖</div>
+                        <div class="kpi-value">79</div>
+                        <div class="kpi-label">Total Books</div>
+                    </div>
+                    <div class="kpi-card success">
+                        <div class="kpi-icon">📤</div>
+                        <div class="kpi-value">10</div>
+                        <div class="kpi-label">Books Issued</div>
+                    </div>
+                    <div class="kpi-card danger">
+                        <div class="kpi-icon">⚠️</div>
+                        <div class="kpi-value">3</div>
+                        <div class="kpi-label">Overdue Books</div>
+                    </div>
+                    <div class="kpi-card warning">
+                        <div class="kpi-icon">👥</div>
+                        <div class="kpi-value">6</div>
+                        <div class="kpi-label">Active Members</div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3>📈 Monthly Book Issues</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Books Issued</th>
+                                    <th>Books Returned</th>
+                                    <th>Trend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>February 2026</strong></td>
+                                    <td>19</td>
+                                    <td>14</td>
+                                    <td><span class="badge badge-warning">↓ Ongoing</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>January 2026</strong></td>
+                                    <td>28</td>
+                                    <td>25</td>
+                                    <td><span class="badge badge-danger">↓ -7%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>December 2025</strong></td>
+                                    <td>30</td>
+                                    <td>28</td>
+                                    <td><span class="badge badge-success">↑ +36%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>November 2025</strong></td>
+                                    <td>22</td>
+                                    <td>20</td>
+                                    <td><span class="badge badge-danger">↓ -12%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>October 2025</strong></td>
+                                    <td>25</td>
+                                    <td>23</td>
+                                    <td><span class="badge badge-success">↑ +39%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>September 2025</strong></td>
+                                    <td>18</td>
+                                    <td>16</td>
+                                    <td><span class="badge badge-info">— Baseline</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chart-card">
+                        <h3>📚 Books by Genre</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Genre</th>
+                                    <th>Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fiction</td>
+                                    <td><strong>24</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Computer Science</td>
+                                    <td><strong>23</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Dystopian</td>
+                                    <td><strong>10</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Non-Fiction</td>
+                                    <td><strong>6</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Fantasy</td>
+                                    <td><strong>5</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Self-Help</td>
+                                    <td><strong>5</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Philosophy</td>
+                                    <td><strong>3</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Romance</td>
+                                    <td><strong>3</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <div class="table-header">
+                        <h3>🕒 Recent Activity</h3>
+                    </div>
+                    <div style="padding: 8px 24px 20px;">
+                        <div class="activity-item">
+                            <div class="activity-icon issued">📤</div>
+                            <div class="activity-text">
+                                <p>"1984" issued to Karthik Nair</p>
+                                <span>2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon issued">📤</div>
+                            <div class="activity-text">
+                                <p>"To Kill a Mockingbird" issued to Ananya Iyer</p>
+                                <span>5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon returned">📥</div>
+                            <div class="activity-text">
+                                <p>"The Hobbit" returned by Rahul Gupta</p>
+                                <span>1 day ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon overdue">⚠️</div>
+                            <div class="activity-text">
+                                <p>"Atomic Habits" is overdue (Sneha Reddy)</p>
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon new-member">🆕</div>
+                            <div class="activity-text">
+                                <p>New member Karthik Nair registered</p>
+                                <span>3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
